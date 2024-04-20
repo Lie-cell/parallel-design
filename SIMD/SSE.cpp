@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <immintrin.h> // For SSE intrinsics
 
-const int N = 1000; // 矩阵大小
+const int N = 1000; // 鐭╅樀澶у皬
 
 float m[N][N];
 
@@ -26,7 +26,7 @@ void m_reset() {
         }
     }
 }
-//优化算法
+//浼樺寲绠楁硶
 /*void gaussian_elimination() {
     for (int k = 0; k < N; ++k) {
         __m128 vt = _mm_set_ps1(m[k][k]); // duplicate m[k,k] into a SSE register
@@ -54,7 +54,7 @@ void m_reset() {
         }
     }
 }*/
-//优化对齐
+//浼樺寲瀵归綈
 void gaussian_elimination() {
     for (int k = 0; k < N - 1; k++) {
         __m128 vt = _mm_set1_ps(m[k][k]);
