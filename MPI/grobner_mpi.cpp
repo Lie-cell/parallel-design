@@ -1,4 +1,8 @@
-
+//本文件包含：
+//普通MPI GE_MPI
+//omp结合版本 GE_MPI_omp
+//AVX结合版本 GE_MPI_AVX
+//omp+AVX结合版 GE_MPI_AVX_omp
 #include<iostream>
 #include<fstream>
 #include<string>
